@@ -28,7 +28,7 @@ function App() {
       const formData = new FormData()
       formData.append('file', file)
 
-      const response = await fetch('/api/process-excel', {
+      const response = await fetch('prj_dc2319rlfQIt7tRSjW2MiCAtppng', {
         method: 'POST',
         body: formData
       })
