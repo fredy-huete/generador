@@ -28,14 +28,10 @@ function App() {
       const formData = new FormData()
       formData.append('file', file)
 
-      // Send file to Express backend https://kjbwkqv4-5000.use.devtunnels.ms/upload
-      const response = await fetch(
-        'https://generador-alpha.vercel.app/upload',
-        {
-          method: 'POST',
-          body: formData
-        }
-      )
+      const response = await fetch('https://generador-alpha.vercel.app/', {
+        method: 'POST',
+        body: formData
+      })
 
       setStatus('uploaded')
 
