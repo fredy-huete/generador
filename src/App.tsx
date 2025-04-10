@@ -28,10 +28,13 @@ function App() {
       const formData = new FormData()
       formData.append('file', file)
 
-      const response = await fetch('https://generador-alpha.vercel.app/', {
-        method: 'POST',
-        body: formData
-      })
+      const response = await fetch(
+        'https://generador-alpha.vercel.app/api/process-excel',
+        {
+          method: 'POST',
+          body: formData
+        }
+      )
 
       setStatus('uploaded')
 
